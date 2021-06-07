@@ -1,0 +1,61 @@
+<template>
+    <ion-page>
+        <ion-header :translucent="true">
+            <ion-toolbar>
+                <ion-title style="color: #17DAED; font-family: Marker Felt; font-size: 30px">NAELE</ion-title>
+                <!--<ion-searchbar/>-->
+            </ion-toolbar>
+        </ion-header><br>
+
+        <ion-content fullscreen>
+            <ion-header :translucent="true">
+                <ion-toolbar>
+                    <ion-title style="color: #17DAED; font-family: Marker Felt; font-size: 15px; text-align: center">NOTRE HISTOIRE</ion-title>
+                    <!--<ion-searchbar/>-->
+                </ion-toolbar>
+            </ion-header><br>
+
+            <ion-card>
+                <img src="assets/images/shapes.svg" />
+                <ion-card-header>
+                    <ion-card-title style="text-align: center"> NAvigo-ELEctronique</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-card-subtitle style="text-align: center">Qui sommes nous ?</ion-card-subtitle>
+                </ion-card-content>
+                <ion-card-content>
+                    Notre histoire commence en 2019 pendant les greves des gillets jaunes,
+                    plusieurs d'entre nous se trouve alors enpeche de prendre les transports publiques (trains, metros etc)
+                    Le nombre de demande de location de trotinnetes électriques, vélos électriques et skateboard électrique à explosé, nous avons
+                    alors décide tuut simplement de créer un pass navigo électronique dans le téléphone
+                    que permet aux utilisateur d'avoir accés à tout les vehicules électriques du quotidient (skateboard, vélos, trotinnetes, scooters) en location!
+                </ion-card-content>
+                <ion-card-content>
+                    <ion-card-subtitle style="text-align: center"> Miantenant que vous savez qui nous sommes, vous êtes prêt pour l'aventure ?</ion-card-subtitle>
+                </ion-card-content>
+            </ion-card>
+        </ion-content>
+    </ion-page>
+
+</template>
+
+<script>
+    import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonCardContent } from '@ionic/vue';
+    export default {
+        name: "About",
+        components: {
+            IonContent,
+            IonHeader,
+            IonPage,
+            IonTitle,
+            IonToolbar,
+            IonCardContent,
+        }
+    }
+</script>
+
+<style>
+    .IonBtn{
+        background-color:#17DAED
+    }
+</style>
