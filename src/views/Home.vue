@@ -118,7 +118,7 @@
             <ion-button color="primary" style="width: 23%"><img src="assets/images/img-twit.png"/></ion-button>
           </section><br>
 
-            <p style="text-align: center">
+            <p style="text-align: center">z
                 Made with ❤️ à Paris
             </p>
           </ion-card-content>
