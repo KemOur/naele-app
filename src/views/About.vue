@@ -1,20 +1,6 @@
 <template>
     <ion-page>
-        <ion-header :translucent="true">
-            <ion-toolbar>
-                <ion-title style="color: #17DAED; font-family: Marker Felt; font-size: 30px">NAELE</ion-title>
-                <!--<ion-searchbar/>-->
-            </ion-toolbar>
-        </ion-header><br>
-
         <ion-content fullscreen>
-            <ion-header :translucent="true">
-                <ion-toolbar>
-                    <ion-title style="color: #17DAED; font-family: Marker Felt; font-size: 15px; text-align: center">NOTRE HISTOIRE</ion-title>
-                    <!--<ion-searchbar/>-->
-                </ion-toolbar>
-            </ion-header><br>
-
             <ion-card>
                 <img src="assets/images/shapes.svg" />
                 <ion-card-header>
@@ -36,19 +22,28 @@
             </ion-card>
         </ion-content>
     </ion-page>
-
 </template>
 
 <script>
-    import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonCardContent } from '@ionic/vue';
+    import {
+        IonCard,
+        IonCardSubtitle,
+        IonContent,
+        IonCardHeader,
+        IonCardTitle,
+        IonPage,
+        IonCardContent
+    } from '@ionic/vue';
+
     export default {
         name: "About",
         components: {
+            IonCard,
+            IonCardSubtitle,
+            IonCardHeader,
             IonContent,
-            IonHeader,
+            IonCardTitle,
             IonPage,
-            IonTitle,
-            IonToolbar,
             IonCardContent,
         }
     }

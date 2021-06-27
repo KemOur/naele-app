@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "Espaceutilisateur"
+        name: "Me"
     }
 </script>
 

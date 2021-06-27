@@ -1,16 +1,9 @@
 <template>
     <ion-page>
-        <ion-header :translucent="true">
-            <ion-toolbar>
-                <ion-title style="color: #17DAED; font-family: Marker Felt; font-size: 30px">NAELE</ion-title>
-                <!--<ion-searchbar/>-->
-            </ion-toolbar>
-        </ion-header><br>
 
         <ion-content fullscreen>
-            <ion-header>
-                <ion-title style="text-align: center">Inscription</ion-title><br>
-            </ion-header>
+                <h5 style="text-align: center">Inscription</h5>
+            <br>
 
         <form @submit.prevent="">
             <ion-card-content>
@@ -44,15 +37,22 @@
 </template>
 
 <script>
-    import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonCardContent, IonButton, IonItem, IonInput } from '@ionic/vue';
+    import {
+        IonLabel,
+        IonContent,
+        IonPage,
+        IonCardContent,
+        IonButton,
+        IonItem,
+        IonInput
+    } from '@ionic/vue';
+
     export default {
         name: "Inscription",
         components: {
+            IonLabel,
             IonContent,
-            IonHeader,
             IonPage,
-            IonTitle,
-            IonToolbar,
             IonCardContent,
             IonButton,
             IonItem,

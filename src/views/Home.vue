@@ -1,20 +1,11 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <section>
-            <ion-title style="color: #17DAED; font-family: Marker Felt; font-size: 85%;float: left; height: 38px">NAELE</ion-title>
-          <div style="width: 75%; float: right">
-            <ion-searchbar/>
-          </div>
 
-        </section><br>
-      </ion-toolbar>
-    </ion-header><br>
+  <ion-content fullscreen>
+      <div class="container">
 
-    <ion-content fullscreen>
       <ion-card-content>
-        <ion-subtitle>Les étapes à suivre pour voyager avec NAELE</ion-subtitle>
+        <ion-card-subtitle>Les étapes à suivre pour voyager avec NAELE</ion-card-subtitle>
         <img src="assets/images/img-f.png" style="width: 100%;height: 200px"/><br>
         <ion-list>
           <ion-item>
@@ -33,8 +24,10 @@
 
         <ion-title style="text-align: center">Derniers actualités</ion-title>
         <p style="text-align: center">Chaque semaine une nouvelle actualité</p>
-
       </ion-card-content>
+
+
+
         <ion-card>
           <img src="assets/images/img-d.png" />
           <ion-card-header>
@@ -49,6 +42,8 @@
           </ion-card-content>
         </ion-card>
       <br>
+
+
       <p style="text-align: center">Vous êtes prêt pour l'aventure ?</p>
       <p style="text-align: center; font-size: 12px">Choisissez votre pass navigo et roullez avec NAELE</p>
 
@@ -67,6 +62,9 @@
         </ion-card-content>
         </ion-card>
 
+
+
+
       <ion-card style="background-color: #F8F8F8">
           <ion-card-header>
             <ion-card-title style="text-align: center">Abonnements</ion-card-title>
@@ -78,6 +76,8 @@
           <ion-button color="dark" expand="full">Chosir un pass navigo</ion-button>
         </ion-card-content>
         </ion-card>
+
+
 
       <ion-card style="background-color: #59B0E3">
           <ion-card-header>
@@ -91,9 +91,12 @@
         </ion-card-content>
         </ion-card>
 
+
+
       <ion-card-header>
         <ion-card-subtitle style="text-align: center">Ils ont par le mieux que nous !</ion-card-subtitle>
       </ion-card-header>
+
 
       <ion-card style="background-color: #F8F8F8">
             <ion-card-header>
@@ -107,6 +110,8 @@
           </ion-card-content>
         </ion-card>
 
+
+
       <ion-card-content style="background-color: #F3F9FE">
 
           <ion-card-content>
@@ -118,29 +123,54 @@
             <ion-button color="primary" style="width: 23%"><img src="assets/images/img-twit.png"/></ion-button>
           </section><br>
 
-            <p style="text-align: center">z
+            <p style="text-align: center">
                 Made with ❤️ à Paris
             </p>
           </ion-card-content>
         </ion-card-content>
+      </div>
     </ion-content>
   </ion-page>
-
 </template>
 
 <script>
-  import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonCardContent,IonSearchbar } from '@ionic/vue';
+  //import Navbar from "../components/Navbar";
+
+  import {
+    IonPage,
+    IonContent,
+    IonTitle,
+    IonCardContent,
+    IonLabel,
+    IonButton,
+    IonCard,
+    IonCardSubtitle,
+    IonCardHeader,
+    IonCardTitle,
+    IonList,
+    IonItem,
+
+
+  } from '@ionic/vue';
+
   import {defineComponent} from "vue";
   export default defineComponent({
     name: "Home",
     components: {
-      IonContent,
-      IonHeader,
       IonPage,
+      IonContent,
       IonTitle,
-      IonToolbar,
       IonCardContent,
-      IonSearchbar
+      IonLabel,
+      IonButton,
+      IonCard,
+      IonCardSubtitle,
+      IonCardHeader,
+      IonCardTitle,
+      IonList,
+      IonItem,
+
+
     }
   })
 </script>

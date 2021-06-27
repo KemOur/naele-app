@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import Home from '../views/Home.vue'
-import LandingPage from '../views/LandingPage.vue'
-import Inscription from '../views/Inscription.vue'
-import Connection from '../views/Connection.vue'
-import Abonnements from '../views/Abonnements.vue'
-import Actualites from '../views/Actualites.vue'
-import AbonnementConfirmation from '../views/AbonnementConfirmation.vue'
-import Espaceutilisateur from '../views/Espaceutilisateur.vue'
+import Welcome from '../views/Welcome.vue'
+import Register from '../views/Register.vue'
+import Login from '../views/Login.vue'
+import Services from '../views/Services.vue'
+import Actuality from '../views/Actuality.vue'
+import Servicesconf from '../views/Servicesconf.vue'
+import Me from '../views/Me.vue'
 import Contact from '../views/Contact.vue'
 import About from '../views/About.vue'
 
@@ -21,36 +21,36 @@ const routes = [
     component: Home
   },
   {
-    path: '/landingpage',
-    name: 'LandingPage',
-    component: LandingPage
+    path: '/welcome',
+    name: 'Welcome',
+    component: Welcome
   },
   {
-    path: '/inscription',
-    name: 'Inscription',
-    component: Inscription
+    path: '/register',
+    name: 'Register',
+    component: Register
   },  {
-    path: '/connection',
-    name: 'Connection',
-    component: Connection
+    path: '/login',
+    name: 'Login',
+    component: Login
   },  {
-    path: '/abonnements',
-    name: 'Abonnements',
-    component: Abonnements
+    path: '/services',
+    name: 'Services',
+    component: Services
   },  {
-    path: '/actualites',
-    name: 'Actualites',
-    component: Actualites
+    path: '/actuality',
+    name: 'Actuality',
+    component: Actuality
   },  {
-    path: '/abonnementsconfirmation',
-    name: 'AbonnementConfirmation',
-    component: AbonnementConfirmation
+    path: '/servicesconf',
+    name: 'Servicesconf',
+    component: Servicesconf
   },
 
   {
-    path: '/userespace',
-    name: 'UserEspace',
-    component: Espaceutilisateur
+    path: '/me',
+    name: 'Me',
+    component: Me
   },
 
   {

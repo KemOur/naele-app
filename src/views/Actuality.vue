@@ -1,14 +1,6 @@
 <template>
     <ion-page>
-        <ion-header :translucent="true">
-            <ion-toolbar>
-                <ion-title style="color: #17DAED; font-family: Marker Felt; font-size: 30px">NAELE</ion-title>
-                <!--<ion-searchbar/>-->
-            </ion-toolbar>
-        </ion-header><br>
-
         <ion-content fullscreen>
-
             <ion-title style="text-align: center">Actualités</ion-title>
             <p style="text-align: center">Chaque semaine une nouvelle actualité</p>
 
@@ -59,15 +51,27 @@
 </template>
 
 <script>
-    import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonCardContent } from '@ionic/vue';
+    import {
+        IonCardTitle,
+        IonCardHeader,
+        IonCardSubtitle,
+        IonButton,
+        IonCard,
+        IonContent,
+        IonPage,
+        IonTitle,
+        IonCardContent } from '@ionic/vue';
     export default {
         name: "Actualites",
         components: {
+            IonCardTitle,
+            IonCardHeader,
+            IonCard,
+            IonCardSubtitle,
+            IonButton,
             IonContent,
-            IonHeader,
             IonPage,
             IonTitle,
-            IonToolbar,
             IonCardContent,
         }
     }

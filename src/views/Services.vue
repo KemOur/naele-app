@@ -1,12 +1,5 @@
 <template>
     <ion-page>
-        <ion-header :translucent="true">
-            <ion-toolbar>
-                <ion-title style="color: #17DAED; font-family: Marker Felt; font-size: 30px">NAELE</ion-title>
-                <!--<ion-searchbar/>-->
-            </ion-toolbar>
-        </ion-header><br>
-
         <ion-content fullscreen>
 
             <h5 style="text-align: center">Forfaits Navigo-Electrique</h5>
@@ -62,15 +55,29 @@
 </template>
 
 <script>
-    import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonCardContent } from '@ionic/vue';
+    import {
+        IonCardTitle,
+        IonCardSubtitle,
+        IonCardHeader,
+        IonButton,
+        IonCard,
+        IonContent,
+        IonPage,
+        IonTitle,
+        IonCardContent
+    } from '@ionic/vue';
+
     export default {
         name: "Abonnements",
         components: {
+            IonCardTitle,
+            IonCardSubtitle,
+            IonCardHeader,
+            IonButton,
+            IonCard,
             IonContent,
-            IonHeader,
             IonPage,
             IonTitle,
-            IonToolbar,
             IonCardContent,
         }
     }
