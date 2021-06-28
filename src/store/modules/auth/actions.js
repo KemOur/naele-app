@@ -189,10 +189,10 @@ export const logout = ({ commit, state }) => {
 
 export const allActus = ({ commit }) => {
     axios
-        .get("http://naele.herokuapp.com/api/actus")
+        .get("https://naele.herokuapp.com/api/actus")
         .then((response) => {
             commit("dataNews", response.data);
-           // console.log(response.data)
+           console.log(response.data)
         })
         .catch(() => {});
 };
