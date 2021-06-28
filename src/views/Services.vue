@@ -4,34 +4,35 @@
 
             <h5 style="text-align: center">Forfaits Navigo-Electrique</h5>
 
-            <ion-card style="background-color: #F8F8F8">
-                <ion-card-header>
-                    <ion-card-title style="text-align: center">NE- ETUDIANTS</ion-card-title>
-                    <ion-card-subtitle style="text-align: center">Navigo Électrique pour étudiants</ion-card-subtitle>
-                </ion-card-header>
+            <div v-for="p in plans" :key="p.id">
+                <ion-card style="background-color: #F8F8F8">
+                    <ion-card-header>
+                        <ion-card-title style="text-align: center">{{p.name}}</ion-card-title>
+                        <ion-card-subtitle style="text-align: center">
+                            {{p.slug}}
+                        </ion-card-subtitle>
+                    </ion-card-header>
 
-                <ion-card-content>
-                    Founded in 1829 on an isthmus between Lake Monona and Lake Mendota
-                </ion-card-content>
-                <p style="text-align: center">29,99</p>
-
-                <ion-card-content>
-                    <ion-button color="secondary" expand="full">S'abonner</ion-button>
-                </ion-card-content>
-            </ion-card><br>
+                    <ion-card-content>
+                        {{p.description}}
+                    </ion-card-content>
+                    <p style="text-align: center">{{p.cost}}€ /mois</p>
 
 
-            <ion-card style="background-color: #F8F8F8">
-                <ion-card-header>
-                    <ion-card-title style="text-align: center">Junior le Sénior</ion-card-title>
-                    <p style="text-align: center">NE-ÉTUDIANT</p>
-                    <hr style="border: 2px solid white">
-                </ion-card-header>
-                <ion-card-content>
-                    <p style="text-align: center">
-                        Une superbe experience j'ai beaucoup aimé le fait de pouvoir être à la fois dans une trotinnete, skataboard et un vélo dans une même journée</p>
-                </ion-card-content>
-            </ion-card>
+
+                    <ion-card-content v-if="user.name">
+                        <ion-card-content>
+                            <ion-button color="secondary" expand="full">S'abonner</ion-button>
+                        </ion-card-content>
+                    </ion-card-content>
+
+                    <ion-card-content v-else>
+                        <p>se connecter, pour s'abonner </p>
+                    </ion-card-content>
+
+
+                </ion-card><br>
+            </div>
 
             <ion-card-content style="background-color: #F3F9FE">
 
@@ -55,6 +56,8 @@
 </template>
 
 <script>
+    import { mapGetters, mapActions } from "vuex";
+
     import {
         IonCardTitle,
         IonCardSubtitle,
@@ -79,7 +82,19 @@
             IonPage,
             IonTitle,
             IonCardContent,
-        }
+        },
+        data() {
+            return {};
+        },
+        mounted() {
+            this.allServices
+        },
+        computed: {
+            ...mapGetters({ plans: "plans" }),
+            ...mapGetters({ user: "data" }),
+            ...mapActions(['allServices']),
+        },
+
     }
 </script>
 

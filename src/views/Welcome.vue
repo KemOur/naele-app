@@ -1,39 +1,39 @@
 <template>
     <ion-page>
-    <ion-app>
-        <ion-content fullscreen class="ion-padding" scroll-y="false">
-            <ion-slides>
-                <ion-slide>
-                    <div class="slide">
-                        <img src="assets/images/img-b.png"/>
-                        <h2>Welcome</h2>
-                        <p>The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.</p>
-                    </div>
-                </ion-slide>
+        <ion-app>
+            <ion-content fullscreen class="ion-padding" scroll-y="false">
+                <ion-slides>
+                    <ion-slide>
+                        <div class="slide">
+                            <img src="assets/images/img-b.png"/>
+                            <h2>Welcome</h2>
+                            <p>The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.</p>
+                        </div>
+                    </ion-slide>
 
-                <ion-slide>
-                    <img src="assets/images/img-f.png"/>
-                    <h2>What is Ionic?</h2>
-                    <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.</p>
-                </ion-slide>
+                    <ion-slide>
+                        <img src="assets/images/img-f.png"/>
+                        <h2>What is Ionic?</h2>
+                        <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.</p>
+                    </ion-slide>
 
-                <ion-slide>
-                    <img src="assets/images/img-c.png"/>
-                    <h2>What is Appflow?</h2>
-                    <p><b>Appflow</b> is a powerful set of services and features built on top of Ionic Framework that brings a totally new level of app development agility to mobile dev teams.</p>
-                </ion-slide>
+                    <ion-slide>
+                        <img src="assets/images/img-c.png"/>
+                        <h2>What is Appflow?</h2>
+                        <p><b>Appflow</b> is a powerful set of services and features built on top of Ionic Framework that brings a totally new level of app development agility to mobile dev teams.</p>
+                    </ion-slide>
 
-                <ion-slide>
-                    <img src="assets/images/img-f.png"/>
-                    <h2>Ready to Play?</h2>
-                    <ion-col>
-                        <ion-router-link href="/home" class="underline">Bienvenue</ion-router-link>
-                    </ion-col>
-                </ion-slide>
+                    <ion-slide>
+                        <img src="assets/images/img-f.png"/>
+                        <h2>Ready to Play?</h2>
+                        <ion-col>
+                            <ion-router-link href="/home" class="underline">Bienvenue</ion-router-link>
+                        </ion-col>
+                    </ion-slide>
 
-            </ion-slides>
-        </ion-content>
-    </ion-app>
+                </ion-slides>
+            </ion-content>
+        </ion-app>
     </ion-page>
 </template>
 
@@ -89,7 +89,7 @@
     p b {
         color: var(--ion-text-color, #000000);
     }
-.IonBtn{
-    background-color:#17DAED
-}
+    .IonBtn{
+        background-color:#17DAED
+    }
 </style>

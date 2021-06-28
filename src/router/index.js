@@ -9,6 +9,8 @@ import Servicesconf from '../views/Servicesconf.vue'
 import Me from '../views/Me.vue'
 import Contact from '../views/Contact.vue'
 import About from '../views/About.vue'
+import Actu from '../views/Actu.vue'
+
 
 const routes = [
   {
@@ -54,6 +56,10 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
+  },{
+    path: '/actu/:id',
+    name: 'Actu',
+    component: Actu
   },
 ]
 

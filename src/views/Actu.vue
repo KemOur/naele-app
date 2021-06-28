@@ -1,30 +1,24 @@
 <template>
     <ion-page>
-        <ion-content fullscreen>
+        <ion-content :fullscreen="true">
             <ion-title style="text-align: center">Actualités</ion-title>
             <p style="text-align: center">Chaque jour une nouvelle actualité</p>
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title style="text-align: center">{{actu.title}}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    {{actu.resume}}
+                </ion-card-content>
 
-            <div v-for="a in actus" :key="a.id">
-                <ion-card>
-                    <img :src="a.img_url" />
-                    <ion-card-header>
-                        <ion-card-title style="text-align: center">{{a.title}}</ion-card-title>
-                    </ion-card-header>
-                    <ion-card-content>
-                        {{a.resume}}
-                    </ion-card-content>
-                    <ion-card-content>
-                        {{a.content}}
-                    </ion-card-content>
+                <ion-card-content>
+                    {{actu.content}}
+                </ion-card-content>
 
-                    <!--<ion-card-content> <router-link :to="{ path: '/actu/'+ a.id }"> Lire la suite </router-link> </ion-card-content>-->
-
-                    <ion-card-content>
-                        <ion-card-subtitle>{{a.created_at  ? new Date(a.created_at).toLocaleString(): "" }}</ion-card-subtitle>
-                    </ion-card-content>
-                </ion-card>
-            </div>
-
+                <ion-card-content>
+                    <ion-card-subtitle>{{actu.created_at  ? new Date(actu.created_at).toLocaleString(): "" }}</ion-card-subtitle>
+                </ion-card-content>
+            </ion-card>
 
             <ion-card-content style="background-color: #F3F9FE">
                 <ion-card-content>
@@ -60,7 +54,7 @@
         IonTitle,
         IonCardContent } from '@ionic/vue';
     export default {
-        name: "Actuality",
+        name: "Actu",
         components: {
             IonCardTitle,
             IonCardHeader,
@@ -76,11 +70,11 @@
             return {};
         },
         mounted() {
-            this.allActus
+            this.showActu
         },
         computed: {
-            ...mapGetters({ actus: "actus" }),
-            ...mapActions(['allActus']),
+            ...mapGetters({ actu: "data" }),
+            ...mapActions(['showActu']),
         },
     };
 </script>

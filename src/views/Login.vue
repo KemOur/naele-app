@@ -2,20 +2,22 @@
     <ion-page>
 
         <ion-content fullscreen>
-                <h5 style="text-align: center">Connexion</h5>
+            <h5 style="text-align: center">Connexion</h5>
             <br>
 
-            <form @submit.prevent="">
+            <form @submit.prevent="login(form)">
                 <ion-card-content>
+
                     <ion-item>
                         <ion-label position="floating">Email</ion-label>
-                        <ion-input/>
+                        <ion-input placeholder="elon@tesla.com" type="email" class="form-control" id="email" name="email" v-model="form.email" />
                     </ion-item>
 
                     <ion-item>
                         <ion-label position="floating">Mot de passe</ion-label>
-                        <ion-input/>
-                    </ion-item><br>
+                        <ion-input type="password" class="form-control" id="password" name="password" v-model="form.password" />
+                    </ion-item>
+                    <br>
                     <ion-button type="submit" expand="full" color="dark">Connexion</ion-button>
                 </ion-card-content>
 
@@ -36,6 +38,7 @@
         IonItem,
         IonInput
     } from '@ionic/vue';
+    import {mapActions} from "vuex";
 
     export default {
         name: "Connection",
@@ -47,6 +50,14 @@
             IonButton,
             IonItem,
             IonInput
+        },
+        data() {
+            return {
+                form: {}
+            };
+        },
+        methods: {
+            ...mapActions({'login': 'login'})
         }
     }
 </script>

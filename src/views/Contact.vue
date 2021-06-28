@@ -1,40 +1,48 @@
 <template>
     <ion-page>
         <ion-content fullscreen>
-                <h5 style="text-align: center">Contactez-nous</h5>
-            <br>
+            <h5 style="text-align: center">Contactez-nous</h5>
 
-            <form @submit.prevent="">
+            <form @submit.prevent="contact(form)">
                 <ion-card-content>
                     <ion-item>
                         <ion-label position="floating">Nom</ion-label>
-                        <ion-input/>
+                        <ion-input placeholder="Elon" type="text" class="form-control" id="firstname" name="firstname" v-model="form.firstname" />
                     </ion-item>
 
                     <ion-item>
                         <ion-label position="floating">Prénom</ion-label>
-                        <ion-input/>
+                        <ion-input placeholder=" Musk" type="text" class="form-control" id="lastname" name="lastname" v-model="form.lastname" />
                     </ion-item>
 
                     <ion-item>
                         <ion-label position="floating">Email</ion-label>
-                        <ion-input/>
+                        <ion-input placeholder="elon@tesla.com" type="email" class="form-control" id="email" name="email" v-model="form.email" />
                     </ion-item>
 
                     <ion-item>
                         <ion-label position="floating">Objet</ion-label>
-                        <ion-input/>
+                        <ion-input placeholder="Elon Musk" type="text" class="form-control" id="subject" name="subject" v-model="form.subject" />
                     </ion-item>
 
                     <ion-item>
                         <ion-label position="floating">Votre message</ion-label>
-                        <ion-textarea position="floating" placeholder="Message..."/>
+                        <ion-textarea position="floating" placeholder="Message..." type="text" class="form-control" id="message" name="message" v-model="form.message" />
                     </ion-item><br>
                     <ion-button type="submit" expand="full" color="dark">Envoyer</ion-button>
                 </ion-card-content>
             </form>
 
             <p style="text-align: center">Mettre ici la carte google maps</p>
+            <ion-card-content>
+                <img src="assets/images/map.png"/>
+            </ion-card-content>
+
+            <ion-card-content>
+                <p>Téléphone : 01 42 41 97 76</p>
+                <p>Email : ecole@lwebstart.com</p>
+                <p>Adresse : 19 Rue Yves Toudic, 75010 Paris</p>
+            </ion-card-content>
 
             <ion-card-content style="background-color: #F3F9FE">
                 <ion-card-content>
@@ -57,6 +65,8 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex'
+
     import {
         IonTextarea,
         IonLabel,
@@ -81,6 +91,14 @@
             IonButton,
             IonItem,
             IonInput
+        },
+        data() {
+            return {
+                form: {}
+            };
+        },
+        methods: {
+            ...mapActions(['contact'])
         }
     }
 </script>
