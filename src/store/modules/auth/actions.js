@@ -210,7 +210,7 @@ export const allServices = ({ commit }) => {
 //not working
 export const showActu = ({ commit }, id) => {
     axios
-        .get(`http://127.0.0.1:8000/api/actudetail/${id}`)
+        .get(`https://naele.herokuapp.com/api/actudetail/${id}`)
         .then((response) => {
             console.log(response)
             const actu = {
