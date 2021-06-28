@@ -10,7 +10,7 @@ export const login = ({ commit }, form) => {
     };
 
     axios
-        .post("http://127.0.0.1:8000/api/login", params)
+        .post("https://naele.herokuapp.com/api/login", params)
         .then((response) => {
             commit("token", response.data.token);
             const config = {
@@ -20,7 +20,7 @@ export const login = ({ commit }, form) => {
             };
 
             axios
-                .post("http://127.0.0.1:8000/api/profile", null, config)
+                .post("https://naele.herokuapp.com/api/profile", null, config)
                 .then((result) => {
                     const user = {
                         id: result.data.id,
@@ -50,7 +50,7 @@ export const login = ({ commit }, form) => {
 
 export const register = ({ commit }, form) => {
     axios.post(
-        'http://127.0.0.1:8000/api/register',
+        'https://naele.herokuapp.com/api/register',
         {
             name: form.name,
             email: form.email,
@@ -69,7 +69,7 @@ export const register = ({ commit }, form) => {
 
         axios
             .post(
-                "http://127.0.0.1:8000/api/profile", null, config)
+                "https://naele.herokuapp.com/api/profile", null, config)
             .then((result) => {
                 const user = {
                     id: result.data.id,
@@ -101,7 +101,7 @@ export const register = ({ commit }, form) => {
 
 export const contact = ({ commit }, form) => {
     axios.post(
-        'http://127.0.0.1:8000/api/contact',
+        'https://naele.herokuapp.com/api/contact',
         {
             firstname: form.firstname,
             lastname: form.lastname,
@@ -142,7 +142,7 @@ export const userInit = ({ commit }) => {
     };
 
     axios
-        .post("http://127.0.0.1:8000/api/profile", null, config)
+        .post("https://naele.herokuapp.com/api/profile", null, config)
         .then((response) => {
             commit("token", token);
             const user = {
@@ -170,7 +170,7 @@ export const logout = ({ commit, state }) => {
     const bodyParameters = {};
     axios
         .post(
-            "http://127.0.0.1:8000/api/logout",
+            "https://naele.herokuapp.com/api/logout",
             bodyParameters,
             config
         )
@@ -199,7 +199,7 @@ export const allActus = ({ commit }) => {
 
 export const allServices = ({ commit }) => {
     axios
-        .get("http://127.0.0.1:8000/api/plans")
+        .get("https://naele.herokuapp.com/api/plans")
         .then((response) => {
             commit("dataServices", response.data);
             //console.log(response.data)
