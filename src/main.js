@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/index'
 import { IonicVue } from '@ionic/vue';
-import  store  from './store'
+import  store  from './store/modules/auth'
 
 
 /* Core CSS required for Ionic components to work properly */

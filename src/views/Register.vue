@@ -38,7 +38,6 @@
 
 <script>
     import {
-        IonLabel,
         IonContent,
         IonPage,
         IonCardContent,
@@ -50,7 +49,6 @@
     export default {
         name: "Inscription",
         components: {
-            IonLabel,
             IonContent,
             IonPage,
             IonCardContent,

@@ -14,18 +14,15 @@ const routes = [
   {
     path: '/',
     redirect: '/home'
-  },
-  {
+  }, {
     path: '/home',
     name: 'Home',
     component: Home
-  },
-  {
+  }, {
     path: '/welcome',
     name: 'Welcome',
     component: Welcome
-  },
-  {
+  }, {
     path: '/register',
     name: 'Register',
     component: Register
@@ -45,20 +42,15 @@ const routes = [
     path: '/servicesconf',
     name: 'Servicesconf',
     component: Servicesconf
-  },
-
-  {
+  }, {
     path: '/me',
     name: 'Me',
     component: Me
-  },
-
-  {
+  }, {
     path: '/contact',
     name: 'Contact',
     component: Contact
-  },
-  {
+  }, {
     path: '/about',
     name: 'About',
     component: About

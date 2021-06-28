@@ -21,7 +21,7 @@
                     <router-link style="color: #0d0d0d" :to="{ name: 'Contact'}">Contact</router-link>
                 </ion-item>
                 <ion-item>
-                    <router-link style="color: #0d0d0d" :to="{ name: 'Services'}">Services</router-link>
+                    <router-link style="color: #0d0d0d" :to="{ name: 'services'}">Services</router-link>
                 </ion-item>
                 <br>
                 <br>
@@ -57,7 +57,6 @@
                 <router-link :to="{ name: 'Home'}">
                     <ion-title style="color: #17DAED; font-family: Marker Felt; font-size: 30px">NAELE</ion-title>
                 </router-link>
-
             </ion-toolbar>
         </ion-header>
     </div>
@@ -78,6 +77,7 @@
         IonTitle,
 
     } from '@ionic/vue';
+
     export default {
         name : 'Navbar',
         components : {
@@ -91,7 +91,6 @@
             IonHeader,
             IonToolbar,
             IonTitle
-        }
+        },
     }
-
 </script>

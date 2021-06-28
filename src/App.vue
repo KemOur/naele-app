@@ -1,7 +1,6 @@
 <template>
   <ion-app>
     <Navbar/>
-
     <ion-content>
       <ion-router-outlet />
     </ion-content>
@@ -12,17 +11,17 @@
 <script>
   import Navbar from './components/Navbar.vue'
   import { IonApp, IonRouterOutlet, IonContent } from '@ionic/vue';
-  import { defineComponent } from 'vue';
 
-export default defineComponent({
+export default {
   name: 'App',
   components: {
     IonContent,
     Navbar,
     IonApp,
     IonRouterOutlet
-  }
-});
+  },
+};
+
 </script>
 
 
